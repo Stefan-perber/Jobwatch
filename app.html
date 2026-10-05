@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Jobwatch</title>
+<style>
+:root{
+  --bg:#f6f7f9;--card:#fff;--ink:#16191d;--mute:#667085;--line:#e4e7ec;--brand:#2f5bea;--brand-ink:#fff;
+  --ok:#0e7a4f;--ok-bg:#e3f5ec;--warn:#9a5b00;--warn-bg:#fff1d6;--bad:#b42318;--bad-bg:#fde7e4;--new:#6a35d6;--new-bg:#efe8ff;--soft:#eef1f6;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --bg:#101216;--card:#181b21;--ink:#eceef2;--mute:#98a2b3;--line:#2a2f38;--brand:#6c8cff;--brand-ink:#0b0d12;
+  --ok:#53d39a;--ok-bg:#14291f;--warn:#f2b34d;--warn-bg:#2d2412;--bad:#ff8a7d;--bad-bg:#2f1815;--new:#b79bff;--new-bg:#241b3d;--soft:#21262e;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+button,input,select,textarea{font:inherit;color:inherit}
+.top{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.top .in{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:-.01em}
+.nav{display:flex;gap:4px;flex:1}
+.nav a{padding:6px 12px;border-radius:8px;color:var(--mute);font-weight:500}
+.nav a.on{background:var(--soft);color:var(--ink);text-decoration:none}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:-.01em}h2{font-size:16px;margin:0 0 10px}
+.sub{color:var(--mute);margin:0 0 16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat b{display:block;font-size:24px;letter-spacing:-.02em}.stat span{color:var(--mute);font-size:13px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.bar input,.bar select{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+.bar input[type=search]{flex:1;min-width:180px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;cursor:pointer;color:var(--mute)}
+.chip.on{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 12px;overflow:hidden}
+.card>.hd{display:flex;align-items:center;gap:10px;padding:12px 14px;flex-wrap:wrap}
+.card>.hd .nm{font-weight:650;font-size:16px}
+.job{padding:12px 14px;border-top:1px solid var(--line);display:grid;gap:6px}
+.job .t{font-weight:550}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--soft);color:var(--mute)}
+.tag.new{background:var(--new-bg);color:var(--new)}.tag.ok{background:var(--ok-bg);color:var(--ok)}
+.tag.warn{background:var(--warn-bg);color:var(--warn)}.tag.bad{background:var(--bad-bg);color:var(--bad)}
+.hook{font-size:13.5px;color:var(--mute);background:var(--soft);border-radius:8px;padding:8px 10px}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:550}
+.btn:hover{background:var(--soft)}.btn.pri{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}.btn.pri:hover{opacity:.92}
+.btn.sm{padding:3px 9px;font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);background:var(--soft)}
+tr.go{cursor:pointer}tr.go:hover td{background:var(--soft)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.pad{padding:14px}
+label{display:block;font-size:12.5px;color:var(--mute);margin:10px 0 3px;font-weight:600}
+.f input,.f select,.f textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+textarea{min-height:96px;resize:vertical}
+.empty{color:var(--mute);padding:18px;text-align:center}
+.log{border-top:1px solid var(--line);padding:10px 14px;font-size:14px}.log small{color:var(--mute)}
+#login{max-width:340px;margin:12vh auto;padding:0 16px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:.2s;z-index:20}
+#toast.on{opacity:1}
+.back{display:inline-block;margin-bottom:10px;color:var(--mute)}
+.warnbox{background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:10px 14px;margin:12px 0}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+const SUPABASE_URL = "https://ttgczlxfsitngxqwrnjg.supabase.co";
+const SUPABASE_KEY = "sb_publishable_Rr8rRIYyJiCL4AJcSNcFDA_k86z9_-G"; // öffentlich; Zugriff schützt der Login (RLS)
+const STATUS = ["neu", "kontaktiert", "interessiert", "später", "kein Bedarf", "Kunde"];
+const OUTCOMES = {
+  "": null, "nicht erreicht": "kontaktiert", "Gatekeeper": "kontaktiert", "Rückruf vereinbart": "kontaktiert",
+  "interessiert": "interessiert", "Termin vereinbart": "interessiert", "kein Bedarf": "kein Bedarf"
+};
+const KINDS = ["anruf", "mail", "linkedin", "notiz"];
+
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const $app = document.getElementById("app");
+const S = { user: null, companies: [], jobs: [], last: {}, filters: { q: "", typ: "", region: "", portal: "", neu: false, due: false }, fq: "", fst: "", freg: "" };
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const today = () => new Date().toISOString().slice(0, 10);
+const days = d => d ? Math.max(0, Math.round((new Date(today()) - new Date(d)) / 864e5)) : 0;
+const fmt = d => d ? new Date(d).toLocaleDateString("de-AT", { day: "2-digit", month: "2-digit", year: "numeric" }) : "";
+function toast(m) { const t = document.getElementById("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2200); }
+async function fetchAll(make) { let out = [], from = 0; for (;;) { const { data, error } = await make().range(from, from + 999); if (error) throw error; out = out.concat(data); if (data.length < 1000) return out; from += 1000; } }
+const must = ({ error, data }) => { if (error) { toast("Fehler: " + error.message); throw error; } return data; };
+
+/* ---------- Login ---------- */
+function loginView(msg) {
+  $app.innerHTML = `<div id="login"><h1>Jobwatch</h1><p class="sub">Bitte anmelden.</p>
+  <form class="f" id="lf"><label>E-Mail</label><input type="email" name="e" required autocomplete="username">
+  <label>Passwort</label><input type="password" name="p" required autocomplete="current-password">
+  <p style="color:var(--bad);min-height:1.4em">${esc(msg || "")}</p><button class="btn pri" style="width:100%">Anmelden</button></form></div>`;
+  document.getElementById("lf").onsubmit = async ev => {
+    ev.preventDefault(); const f = new FormData(ev.target);
+    const { error } = await sb.auth.signInWithPassword({ email: f.get("e"), password: f.get("p") });
+    if (error) loginView("Anmeldung fehlgeschlagen."); else boot();
+  };
+}
+
+/* ---------- Daten ---------- */
+async function load() {
+  const [companies, jobs, acts] = await Promise.all([
+    fetchAll(() => sb.from("companies").select("*").order("name")),
+    fetchAll(() => sb.from("jobs").select("*").eq("active", true).order("id")),
+    sb.from("activities").select("company_id,created_at").order("created_at", { ascending: false }).limit(3000).then(must)
+  ]);
+  S.companies = companies; S.jobs = jobs; S.last = {};
+  for (const a of acts) if (!S.last[a.company_id]) S.last[a.company_id] = a.created_at;
+}
+const cById = id => S.companies.find(c => c.id === +id);
+const isDue = c => c.next_followup && c.next_followup <= today();
+
+function shell(active, inner) {
+  const due = S.companies.filter(isDue).length;
+  $app.innerHTML = `<div class="top"><div class="in"><span class="brand">Jobwatch</span>
+    <nav class="nav"><a href="#/" class="${active === "liste" ? "on" : ""}">Anrufliste</a>
+    <a href="#/firmen" class="${active === "firmen" ? "on" : ""}">Firmen${due ? ` <span class="tag warn">${due} fällig</span>` : ""}</a></nav>
+    <span class="tag">${esc(S.user?.email || "")}</span><button class="btn sm" id="out">Abmelden</button></div></div><main>${inner}</main>`;
+  document.getElementById("out").onclick = async () => { await sb.auth.signOut(); S.user = null; loginView(); };
+}
+
+/* ---------- Anrufliste ---------- */
+function portalTag(p) {
+  if (p === "auch auf karriere.at") return `<span class="tag bad">auch auf karriere.at</span>`;
+  if (p === "nicht auf karriere.at gefunden") return `<span class="tag ok">nicht auf karriere.at gefunden</span>`;
+  return `<span class="tag">Portal ungeprüft</span>`;
+}
+function listView() {
+  const f = S.filters, q = f.q.toLowerCase();
+  const jobs = S.jobs.filter(j => {
+    const c = cById(j.company_id); if (!c) return false;
+    if (q && !(c.name + " " + j.title).toLowerCase().includes(q)) return false;
+    if (f.typ && j.area !== f.typ) return false;
+    if (f.region && !(c.region || "").includes(f.region)) return false;
+    if (f.portal === "frei" && j.portal === "auch auf karriere.at") return false;
+    if (f.neu && days(j.first_seen) > 7) return false;
+    if (f.due && !isDue(c)) return false;
+    return true;
+  });
+  const by = new Map();
+  for (const j of jobs) { if (!by.has(j.company_id)) by.set(j.company_id, []); by.get(j.company_id).push(j); }
+  const groups = [...by.entries()].map(([id, js]) => ({ c: cById(id), js: js.sort((a, b) => (b.first_seen > a.first_seen ? 1 : -1)) }))
+    .sort((a, b) => (isDue(b.c) - isDue(a.c)) || (b.js[0].first_seen > a.js[0].first_seen ? 1 : -1) || a.c.name.localeCompare(b.c.name));
+  const nNew = S.jobs.filter(j => days(j.first_seen) <= 7).length;
+  const nFree = S.jobs.filter(j => j.portal !== "auch auf karriere.at").length;
+  const regions = [...new Set(S.companies.map(c => (c.region || "").split(" / ")[0]).filter(Boolean))].sort();
+  shell("liste", `<h1>Anrufliste</h1><p class="sub">Offene Cloud-, Data- und Infrastruktur-Stellen. Stand: täglich automatisch.</p>
+  <div class="stats"><div class="stat"><b>${S.jobs.length}</b><span>offene Stellen</span></div>
+  <div class="stat"><b>${nNew}</b><span>neu (7 Tage)</span></div>
+  <div class="stat"><b>${nFree}</b><span>nicht auf karriere.at gefunden</span></div>
+  <div class="stat"><b>${S.companies.filter(isDue).length}</b><span>Wiedervorlagen fällig</span></div></div>
+  <div class="bar"><input type="search" id="q" placeholder="Firma oder Stelle suchen" value="${esc(f.q)}">
+  <select id="typ"><option value="">Alle Bereiche</option>${["Cloud", "Data", "Infrastructure"].map(t => `<option ${f.typ === t ? "selected" : ""}>${t}</option>`).join("")}</select>
+  <select id="region"><option value="">Alle Regionen</option>${regions.map(r => `<option ${f.region === r ? "selected" : ""}>${esc(r)}</option>`).join("")}</select>
+  <button class="chip ${f.neu ? "on" : ""}" id="cneu">Nur neu</button>
+  <button class="chip ${f.portal === "frei" ? "on" : ""}" id="cport">Ohne Portal-Treffer</button>
+  <button class="chip ${f.due ? "on" : ""}" id="cdue">Wiedervorlage fällig</button></div>
+  ${groups.length ? groups.map(g => `<div class="card"><div class="hd"><a class="nm" href="#/firma/${g.c.id}">${esc(g.c.name)}</a>
+    <span class="tag">${esc(g.c.region || g.c.ort || "")}</span>${g.c.size_est ? `<span class="tag">${esc(g.c.size_est)} MA</span>` : ""}
+    <span class="tag ${g.c.status === "neu" ? "" : "warn"}">${esc(g.c.status)}</span>${isDue(g.c) ? `<span class="tag bad">Wiedervorlage ${fmt(g.c.next_followup)}</span>` : ""}</div>
+    ${g.js.map(j => `<div class="job"><div class="row"><span class="t">${esc(j.title)}</span>
+      ${days(j.first_seen) <= 7 ? `<span class="tag new">NEU</span>` : `<span class="tag">${days(j.first_seen)} Tage online</span>`}
+      <span class="tag">${esc(j.area || "")}</span>${j.ort ? `<span class="tag">${esc(j.ort)}</span>` : ""}${portalTag(j.portal)}</div>
+      <div class="hook">${esc(j.hook || "")}</div>
+      <div class="row"><button class="btn sm" data-copy="${esc(j.hook || "")}">Aufhänger kopieren</button>
+      <a class="btn sm" href="${esc(j.url)}" target="_blank" rel="noopener">Anzeige öffnen</a>
+      <a class="btn sm" href="#/firma/${g.c.id}">Firmenseite</a></div></div>`).join("")}</div>`).join("")
+    : `<div class="empty">Keine Treffer. Passe die Filter an oder warte auf den nächsten Crawler-Lauf.</div>`}`);
+  const bind = (id, fn) => { const el = document.getElementById(id); if (!el) return; if (el.tagName === "BUTTON") el.onclick = fn; else el.oninput = fn; };
+  bind("q", e => { S.filters.q = e.target.value; const p = e.target.selectionStart; listView(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(p, p); });
+  bind("typ", e => { S.filters.typ = e.target.value; listView(); });
+  bind("region", e => { S.filters.region = e.target.value; listView(); });
+  bind("cneu", () => { S.filters.neu = !S.filters.neu; listView(); });
+  bind("cport", () => { S.filters.portal = S.filters.portal === "frei" ? "" : "frei"; listView(); });
+  bind("cdue", () => { S.filters.due = !S.filters.due; listView(); });
+}
+
+/* ---------- Firmen ---------- */
+function companiesView() {
+  const q = S.fq.toLowerCase();
+  const cnt = {}; for (const j of S.jobs) cnt[j.company_id] = (cnt[j.company_id] || 0) + 1;
+  const list = S.companies.filter(c => (!q || c.name.toLowerCase().includes(q)) && (!S.fst || c.status === S.fst) && (!S.freg || (c.region || "").includes(S.freg)))
+    .sort((a, b) => (isDue(b) - isDue(a)) || ((cnt[b.id] || 0) - (cnt[a.id] || 0)) || a.name.localeCompare(b.name));
+  const regions = [...new Set(S.companies.map(c => (c.region || "").split(" / ")[0]).filter(Boolean))].sort();
+  shell("firmen", `<h1>Firmen</h1><p class="sub">${S.companies.length} Firmen im System.</p>
+  <div class="bar"><input type="search" id="fq" placeholder="Firma suchen" value="${esc(S.fq)}">
+  <select id="fst"><option value="">Alle Status</option>${STATUS.map(s => `<option ${S.fst === s ? "selected" : ""}>${s}</option>`).join("")}</select>
+  <select id="freg"><option value="">Alle Regionen</option>${regions.map(r => `<option ${S.freg === r ? "selected" : ""}>${esc(r)}</option>`).join("")}</select></div>
+  <div style="overflow-x:auto"><table><thead><tr><th>Firma</th><th>Region</th><th>Größe</th><th>Status</th><th>Stellen</th><th>Wiedervorlage</th><th>Zuletzt</th><th>Karriereseite</th></tr></thead><tbody>
+  ${list.map(c => `<tr class="go" data-go="${c.id}"><td><b>${esc(c.name)}</b></td><td>${esc(c.region || "")}</td><td>${esc(c.size_est || "")}</td>
+    <td>${esc(c.status)}</td><td>${cnt[c.id] || 0}</td><td>${isDue(c) ? `<span class="tag bad">${fmt(c.next_followup)}</span>` : fmt(c.next_followup)}</td>
+    <td>${fmt(S.last[c.id])}</td><td><span class="tag ${c.crawl_status === "OK" ? "ok" : c.crawl_status ? "warn" : ""}">${esc(c.crawl_status || "–")}</span></td></tr>`).join("")}
+  </tbody></table></div>`);
+  const bind = (id, key) => { const el = document.getElementById(id); el.oninput = e => { S[key] = e.target.value; const p = e.target.selectionStart; companiesView(); const n = document.getElementById(id); if (id === "fq") { n.focus(); n.setSelectionRange(p, p); } }; };
+  bind("fq", "fq"); bind("fst", "fst"); bind("freg", "freg");
+}
+
+/* ---------- Firmenseite ---------- */
+async function companyView(id) {
+  const c = cById(id); if (!c) { location.hash = "#/firmen"; return; }
+  shell("firmen", `<div class="empty">Lade …</div>`);
+  const [jobs, contacts, acts] = await Promise.all([
+    sb.from("jobs").select("*").eq("company_id", c.id).order("first_seen", { ascending: false }).then(must),
+    sb.from("contacts").select("*").eq("company_id", c.id).order("created_at").then(must),
+    sb.from("activities").select("*").eq("company_id", c.id).order("created_at", { ascending: false }).then(must)
+  ]);
+  const act = jobs.filter(j => j.active), old = jobs.filter(j => !j.active);
+  const jobHtml = j => `<div class="job"><div class="row"><span class="t">${esc(j.title)}</span>
+    ${j.active ? (days(j.first_seen) <= 7 ? `<span class="tag new">NEU</span>` : "") : `<span class="tag">nicht mehr online</span>`}
+    <span class="tag">${esc(j.area || "")}</span>${portalTag(j.portal)}<span class="tag">seit ${fmt(j.first_seen)} · ${days(j.first_seen)} Tage</span></div>
+    ${j.active ? `<div class="hook">${esc(j.hook || "")}</div>` : ""}
+    <div class="row">${j.active ? `<button class="btn sm" data-copy="${esc(j.hook || "")}">Aufhänger kopieren</button>` : ""}<a class="btn sm" href="${esc(j.url)}" target="_blank" rel="noopener">Anzeige öffnen</a></div></div>`;
+  shell("firmen", `<a class="back" href="#/firmen">← Alle Firmen</a>
+  <h1>${esc(c.name)}</h1>
+  <div class="row" style="margin-bottom:14px">${c.region ? `<span class="tag">${esc(c.region)}</span>` : ""}${c.size_est ? `<span class="tag">${esc(c.size_est)} MA</span>` : ""}
+   ${c.domain ? `<a class="tag" href="https://${esc(c.domain)}" target="_blank" rel="noopener">${esc(c.domain)}</a>` : ""}
+   ${c.career_url ? `<a class="tag" href="${esc(c.career_url)}" target="_blank" rel="noopener">Karriereseite</a>` : ""}
+   ${c.ats ? `<span class="tag">${esc(c.ats)}</span>` : ""}<span class="tag ${c.crawl_status === "OK" ? "ok" : "warn"}">Crawl: ${esc(c.crawl_status || "–")}</span>${c.last_crawled ? `<span class="tag">geprüft ${fmt(c.last_crawled)}</span>` : ""}</div>
+  <div class="grid2">
+   <div>
+    <div class="card"><div class="pad f"><h2>Status &amp; Wiedervorlage</h2>
+      <label>Status</label><select id="st">${STATUS.map(s => `<option ${c.status === s ? "selected" : ""}>${s}</option>`).join("")}</select>
+      <label>Wiedervorlage</label><div class="row"><input type="date" id="fu" value="${esc(c.next_followup || "")}" style="flex:1"><button class="btn sm" id="fux">Löschen</button></div>
+      <label>Notizen zur Firma</label><textarea id="nt" placeholder="z. B. Teamstruktur, Ansprechpartner, Gesprächseindruck">${esc(c.notes || "")}</textarea>
+      <div class="row" style="margin-top:8px"><button class="btn pri" id="sv">Speichern</button></div></div></div>
+    <div class="card"><div class="pad f"><h2>Kontakt protokollieren</h2>
+      <div class="row"><div style="flex:1"><label>Art</label><select id="ak">${KINDS.map(k => `<option>${k}</option>`).join("")}</select></div>
+      <div style="flex:2"><label>Ergebnis</label><select id="ao">${Object.keys(OUTCOMES).map(o => `<option value="${esc(o)}">${esc(o || "–")}</option>`).join("")}</select></div></div>
+      <label>Notiz</label><textarea id="an" style="min-height:70px" placeholder="Was wurde besprochen?"></textarea>
+      <label>Wiedervorlage setzen (optional)</label><input type="date" id="af">
+      <div class="row" style="margin-top:8px"><button class="btn pri" id="alog">Eintragen</button></div></div>
+      ${acts.length ? acts.map(a => `<div class="log"><b>${esc(a.kind)}</b>${a.outcome ? ` · ${esc(a.outcome)}` : ""} <small>${fmt(a.created_at)}</small>${a.note ? `<div>${esc(a.note)}</div>` : ""}</div>`).join("") : `<div class="log"><small>Noch kein Kontakt eingetragen.</small></div>`}
+    </div>
+   </div>
+   <div>
+    <div class="card"><div class="hd"><h2 style="margin:0">Offene Stellen (${act.length})</h2></div>${act.length ? act.map(jobHtml).join("") : `<div class="empty">Aktuell keine passenden Stellen online.</div>`}</div>
+    <div class="card"><div class="hd"><h2 style="margin:0">Ansprechpartner (${contacts.length})</h2></div>
+      ${contacts.map(k => `<div class="log"><b>${esc(k.name || "")}</b>${k.role ? ` · ${esc(k.role)}` : ""}<div>${k.email ? `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a>` : ""} ${k.phone ? `<a href="tel:${esc(k.phone)}">${esc(k.phone)}</a>` : ""}</div></div>`).join("") || `<div class="log"><small>Noch keine Kontakte gefunden.</small></div>`}
+      <div class="pad f"><div class="row"><input id="kn" placeholder="Name" style="flex:1;min-width:120px"><input id="kr" placeholder="Rolle" style="flex:1;min-width:120px"></div>
+      <div class="row" style="margin-top:6px"><input id="ke" placeholder="E-Mail" style="flex:1;min-width:120px"><input id="kp" placeholder="Telefon" style="flex:1;min-width:120px"></div>
+      <div style="margin-top:8px"><button class="btn" id="kadd">Kontakt hinzufügen</button></div></div></div>
+    ${old.length ? `<div class="card"><div class="hd"><h2 style="margin:0">Frühere Stellen (${old.length})</h2></div>${old.map(jobHtml).join("")}</div>` : ""}
+   </div>
+  </div>`);
+  const $ = i => document.getElementById(i);
+  const patchC = async (patch, msg) => { must(await sb.from("companies").update(patch).eq("id", c.id)); Object.assign(c, patch); toast(msg || "Gespeichert"); };
+  $("sv").onclick = () => patchC({ status: $("st").value, next_followup: $("fu").value || null, notes: $("nt").value }).then(() => companyView(c.id));
+  $("fux").onclick = () => { $("fu").value = ""; };
+  $("alog").onclick = async () => {
+    const outcome = $("ao").value, note = $("an").value.trim();
+    if (!outcome && !note) { toast("Bitte Ergebnis oder Notiz eintragen"); return; }
+    must(await sb.from("activities").insert({ company_id: c.id, kind: $("ak").value, outcome: outcome || null, note: note || null }));
+    const patch = {}; if (OUTCOMES[outcome]) patch.status = OUTCOMES[outcome]; if ($("af").value) patch.next_followup = $("af").value;
+    if (Object.keys(patch).length) must(await sb.from("companies").update(patch).eq("id", c.id)), Object.assign(c, patch);
+    S.last[c.id] = new Date().toISOString(); toast("Eingetragen"); companyView(c.id);
+  };
+  $("kadd").onclick = async () => {
+    const name = $("kn").value.trim(), email = $("ke").value.trim(); if (!name && !email) { toast("Name oder E-Mail nötig"); return; }
+    must(await sb.from("contacts").insert({ company_id: c.id, name: name || email, role: $("kr").value.trim() || null, email: email || null, phone: $("kp").value.trim() || null, source: "manuell" }));
+    toast("Kontakt gespeichert"); companyView(c.id);
+  };
+}
+
+/* ---------- Router ---------- */
+function route() {
+  if (!S.user) return;
+  const h = location.hash || "#/";
+  let m;
+  if ((m = h.match(/^#\/firma\/(\d+)/))) companyView(m[1]);
+  else if (h.startsWith("#/firmen")) companiesView();
+  else listView();
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", route);
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]");
+  if (b) { navigator.clipboard.writeText(b.dataset.copy).then(() => toast("Kopiert"), () => toast("Kopieren nicht möglich")); return; }
+  const r = e.target.closest("tr[data-go]"); if (r) location.hash = "#/firma/" + r.dataset.go;
+});
+
+async function boot() {
+  const { data } = await sb.auth.getSession();
+  if (!data.session) { loginView(); return; }
+  S.user = data.session.user;
+  $app.innerHTML = `<main><div class="empty">Lade Daten …</div></main>`;
+  try { await load(); route(); } catch (e) { $app.innerHTML = `<main><div class="warnbox">Daten konnten nicht geladen werden: ${esc(e.message || e)}<br>Wurde das zusätzliche SQL (neue Spalten) in Supabase ausgeführt?</div></main>`; }
+}
+boot();
+</script>
+</body>
+</html>
