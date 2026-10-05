@@ -1,513 +1,750 @@
 {
  "Bitpanda": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "bitpanda.com"
  },
  "Kapsch BusinessCom": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.kapsch.net/de/karriere"
+  "career_url": "https://www.kapsch.net/de/karriere/job/posting-systems-administrator-15608"
  },
  "Frequentis": {
-  "seen": [],
+  "seen": {
+   "485963c5153c8f71f6eb4a386e11399a": "2026-10-05",
+   "92d786e6c51fc4f1fda9c011ff74438d": "2026-10-05",
+   "b955c286a028f97daa9bdedd4397e1e9": "2026-10-05",
+   "2c190a8f63f0704db6e6820157b0e929": "2026-10-05",
+   "94daf7fd64c3f231efc17da7a05f84b4": "2026-10-05",
+   "34348a66a4a1ea41b61acb9a5ff869db": "2026-10-05",
+   "74715cfdf184ba14b9cce42093cbad71": "2026-10-05",
+   "37f3be5b37a98a2d1aa68442c2c4124e": "2026-10-05",
+   "5330b49b79f4e6d2aedf1a6dc2689181": "2026-10-05",
+   "25a2c55a0b97ae25e50264e70fae4112": "2026-10-05",
+   "92ec2deaaf8d81ff27008348d951d457": "2026-10-05",
+   "085e05a08345be6853b76a152127f3d7": "2026-10-05",
+   "1e527d8931511af5899196fee06c65f6": "2026-10-05",
+   "f66ae092ef72dd70c4c8d0fdc85669fc": "2026-10-05",
+   "57b24f7ad15680de101c8b843ca01e1e": "2026-10-05",
+   "1223f7ae7590d9d6d164f1aae2cf4d0e": "2026-10-05",
+   "509f007aa2b070e52025977f532b371c": "2026-10-05",
+   "46659b2ce3fb7c21f7ea41eb86aa2f63": "2026-10-05",
+   "9457183362f37b8cf02675281bf02219": "2026-10-05"
+  },
+  "portal": {
+   "485963c5153c8f71f6eb4a386e11399a": "auch auf karriere.at",
+   "92d786e6c51fc4f1fda9c011ff74438d": "nicht prüfbar",
+   "b955c286a028f97daa9bdedd4397e1e9": "auch auf karriere.at",
+   "2c190a8f63f0704db6e6820157b0e929": "nicht prüfbar",
+   "94daf7fd64c3f231efc17da7a05f84b4": "auch auf karriere.at",
+   "34348a66a4a1ea41b61acb9a5ff869db": "auch auf karriere.at",
+   "74715cfdf184ba14b9cce42093cbad71": "nicht prüfbar",
+   "37f3be5b37a98a2d1aa68442c2c4124e": "auch auf karriere.at",
+   "5330b49b79f4e6d2aedf1a6dc2689181": "nicht prüfbar",
+   "25a2c55a0b97ae25e50264e70fae4112": "auch auf karriere.at",
+   "92ec2deaaf8d81ff27008348d951d457": "auch auf karriere.at",
+   "085e05a08345be6853b76a152127f3d7": "nicht prüfbar",
+   "1e527d8931511af5899196fee06c65f6": "nicht prüfbar",
+   "f66ae092ef72dd70c4c8d0fdc85669fc": "auch auf karriere.at",
+   "57b24f7ad15680de101c8b843ca01e1e": "nicht prüfbar",
+   "1223f7ae7590d9d6d164f1aae2cf4d0e": "nicht prüfbar",
+   "509f007aa2b070e52025977f532b371c": "auch auf karriere.at",
+   "46659b2ce3fb7c21f7ea41eb86aa2f63": "nicht prüfbar",
+   "9457183362f37b8cf02675281bf02219": "nicht prüfbar"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.frequentis.com/en/careers"
+  "career_url": "https://jobs.frequentis.com/careers/SearchJobs"
  },
  "ACP": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.acp-gruppe.com/de-at/karriere"
  },
  "Axians Österreich": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://jobs.axians.at/"
  },
  "x-tention": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.x-tention.com/en/career"
+  "career_url": "https://x-tention.com/en/career"
  },
  "Fabasoft": {
-  "seen": [
-   "45293b7727769f77b69dda60aac9ae38",
-   "3063573748c42a82e5fc4f44d15312b3",
-   "35d7ed5ffa6b373d75929f1f82749122",
-   "4df5621ecae661b84ad1efb844b4b9c3",
-   "3eb3cabf3b363e363828512cf281daa9",
-   "a475eb0a6edd359b3c703406a151e31f",
-   "d10e5c32dbd14b262e3ca22c3a388006"
-  ],
+  "seen": {
+   "45293b7727769f77b69dda60aac9ae38": "2026-10-05",
+   "3063573748c42a82e5fc4f44d15312b3": "2026-10-05",
+   "35d7ed5ffa6b373d75929f1f82749122": "2026-10-05",
+   "4df5621ecae661b84ad1efb844b4b9c3": "2026-10-05",
+   "3eb3cabf3b363e363828512cf281daa9": "2026-10-05",
+   "a475eb0a6edd359b3c703406a151e31f": "2026-10-05",
+   "d10e5c32dbd14b262e3ca22c3a388006": "2026-10-05"
+  },
+  "portal": {
+   "45293b7727769f77b69dda60aac9ae38": "auch auf karriere.at",
+   "3063573748c42a82e5fc4f44d15312b3": "nicht prüfbar",
+   "35d7ed5ffa6b373d75929f1f82749122": "auch auf karriere.at",
+   "4df5621ecae661b84ad1efb844b4b9c3": "nicht prüfbar",
+   "3eb3cabf3b363e363828512cf281daa9": "nicht prüfbar",
+   "a475eb0a6edd359b3c703406a151e31f": "nicht prüfbar",
+   "d10e5c32dbd14b262e3ca22c3a388006": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
   "career_url": "https://www.fabasoft.com/en/career/jobs"
  },
  "Bechtle Österreich": {
-  "seen": [
-   "ed9f37b506f0621765a755f237bfa57a"
-  ],
+  "seen": {
+   "ed9f37b506f0621765a755f237bfa57a": "2026-10-05"
+  },
+  "portal": {
+   "ed9f37b506f0621765a755f237bfa57a": "nicht prüfbar"
+  },
   "last": "2026-10-05",
   "career_url": "https://www.bechtle.com/karriere"
  },
  "Tricentis": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.tricentis.com/company/careers"
  },
  "Anexia": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://anexia.com/en/company/careers"
+  "career_url": "https://anexia.com/en/company/careers/job-offers"
  },
  "Dorotheum": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "dorotheum.com"
  },
  "Kommunalkredit": {
-  "seen": [],
+  "seen": {
+   "9a59516dcbfa1ac6034f5545f5829892": "2026-10-05"
+  },
+  "portal": {
+   "9a59516dcbfa1ac6034f5545f5829892": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.kommunalkredit.at/karriere/in-der-kommunalkredit"
+  "career_url": "https://careers.kommunalkredit.at/search/?locale=de_DE"
  },
  "Addiko Bank": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "addiko.com"
  },
  "Volksbank Wien": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://karriere.volksbankwien.at/"
  },
  "Schoellerbank": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "schoellerbank.at"
  },
  "Bank Gutmann": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.gutmann.at/en/career"
  },
  "Wiener Börse": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.wienerborse.at/ueber-uns/organisation/jobs/"
  },
  "OeKB": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.oekb.at/jobs-und-karriere.html"
  },
  "OeNB": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.oenb.at/die-oenb/karriere.html"
  },
  "Wüstenrot": {
-  "seen": [
-   "96fd06100bc485b6a9136b39b57b8991"
-  ],
+  "seen": {
+   "96fd06100bc485b6a9136b39b57b8991": "2026-10-05"
+  },
+  "portal": {
+   "96fd06100bc485b6a9136b39b57b8991": "nicht prüfbar"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.wuestenrot.at/de/ueber-uns/karriere.html"
+  "career_url": "https://www.wuestenrot.at/de/ueber-uns/karriere/offene-stellen.html"
  },
  "Donau Versicherung": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.donauversicherung.at/karriere"
+  "career_url": "https://www.donauversicherung.at/karriere/aktuelle-jobangebote"
  },
  "Nürnberger Versicherung": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.nuernberger.com/karriere/"
  },
  "Helvetia Österreich": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.helvetia.com/jobs"
+  "career_url": "https://www.helvetia-baloise.com/corporate/hb/de/home/ueber-uns/karriere.html"
  },
  "Wolf Theiss": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.wolftheiss.com/your-career/"
+  "career_url": "https://www.wolftheiss.com/your-career/opportunities-for-students/"
  },
  "Schönherr": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.schoenherr.eu/careers"
+  "career_url": "schoenherr.eu"
  },
  "Binder Grösswang": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.bindergroesswang.at/karriere/kanzlei"
+  "career_url": "https://www.bindergroesswang.at/karriere/jobs"
  },
  "Octapharma": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.octapharma.com/career"
+  "career_url": "https://careers.octapharma.com/?locale=en_GB"
  },
  "Gebro Pharma": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.gebro.com/stellenangebote"
+  "career_url": "https://www.gebro.com"
  },
  "Kwizda": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://karriere.kwizda.at/jobs"
  },
  "Richter Pharma": {
-  "seen": [
-   "7cfb0a1914cebf047fceaabea5acfc5d"
-  ],
+  "seen": {
+   "7cfb0a1914cebf047fceaabea5acfc5d": "2026-10-05"
+  },
+  "portal": {
+   "7cfb0a1914cebf047fceaabea5acfc5d": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
   "career_url": "https://karriere.richter-pharma.com/jobportal"
  },
  "Biogena": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "biogena.com"
+  "career_url": "https://career.biogena.com/"
  },
  "ASFINAG": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "asfinag.at"
+  "career_url": "https://karriere.asfinag.at/"
  },
  "Austro Control": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "austrocontrol.at"
+  "career_url": "https://karriere.austrocontrol.at/Jobs"
  },
  "Hutchison Drei": {
-  "seen": [],
+  "seen": {
+   "d1061482928751ca3236b5559ada78ce": "2026-10-05",
+   "48387d7f36b8ace5eb775ff91214b3be": "2026-10-05"
+  },
+  "portal": {
+   "d1061482928751ca3236b5559ada78ce": "auch auf karriere.at",
+   "48387d7f36b8ace5eb775ff91214b3be": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.drei.at/karriere"
+  "career_url": "https://karriere.drei.at/"
  },
  "Wiener Linien": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.wienerlinien.at/u2xu5/baustellen"
+  "career_url": "https://www.wienerlinien.at"
  },
  "Ottakringer": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://freudeundgetraenke.csod.com/ux/ats/careersite/6/home?c=freudeundgetraenke"
  },
  "Manner": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://manner.csod.com/ux/ats/careersite/5/home?c=manner"
+  "career_url": "https://www.manner.com/en-us/"
  },
  "Julius Meinl": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.meinlcoffee.com/about-julius-meinl/career"
+  "career_url": "https://juliusmeinl.com/about-julius-meinl/career"
  },
  "Kastner & Öhler": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "kastner-oehler.at"
  },
  "Lagermax": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.lagermax.at/de-at/karriere"
+  "career_url": "https://www.lagermax.com/de-at/karriere/offene-jobs"
  },
  "BENE": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.bene.com/de/bene/jobs-karriere"
+  "career_url": "https://bene.com/de/bene/jobs-karriere"
  },
  "Semperit": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.semperit.com"
  },
  "Kontron": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "kontron.com"
  },
  "ISG": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.isg.com/jobs"
+  "career_url": "https://www.isg.com/jobs/show/displayJob.jsf?inseratnummer=111769&refererId=20&dswid=-3350"
  },
  "APG": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.apg.at/karriere/"
+  "career_url": "https://www.apg.at/karriere/offene-stellen/"
  },
  "PKE": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.pke.at/de-at/fm/karriere"
+  "career_url": "https://pke-group.com/de/karriere"
  },
  "Rosenbauer": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "rosenbauer.com"
  },
  "SWARCO": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.swarco.com/careers"
  },
  "Polytec": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.polytec-group.com/karriere"
+  "career_url": "https://www.polytec-group.com/karriere/jobportal"
  },
  "Leyrer + Graf": {
-  "seen": [],
+  "seen": {
+   "0de7f5ae05c00d9aac477e480fdf27f2": "2026-10-05",
+   "bf584bd669826a86e3fa278c25f82673": "2026-10-05",
+   "7732849768db699fa18773a278395dfb": "2026-10-05",
+   "8bbfdcd1a6b54c14691817a2561df581": "2026-10-05",
+   "f7418ad57fe32d738a2ca660069e72e4": "2026-10-05"
+  },
+  "portal": {
+   "0de7f5ae05c00d9aac477e480fdf27f2": "nicht prüfbar",
+   "bf584bd669826a86e3fa278c25f82673": "nicht prüfbar",
+   "7732849768db699fa18773a278395dfb": "auch auf karriere.at",
+   "8bbfdcd1a6b54c14691817a2561df581": "nicht prüfbar",
+   "f7418ad57fe32d738a2ca660069e72e4": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.leyrer-graf.at/karriere/"
+  "career_url": "https://jobs.leyrer-graf.at/"
  },
  "TGW Logistics": {
-  "seen": [],
+  "seen": {
+   "5d7aabe46646b57069a19eda387dc073": "2026-10-05",
+   "8ad3f2f06ab8181c96bb81b7794c97fd": "2026-10-05",
+   "82af9f056c6b593e970bbcdad644a3c4": "2026-10-05",
+   "3d2bbc69dfb4107735b1aadade521d26": "2026-10-05",
+   "9ca71fb08fab4f64b4f271a91aefd730": "2026-10-05"
+  },
+  "portal": {
+   "5d7aabe46646b57069a19eda387dc073": "nicht prüfbar",
+   "8ad3f2f06ab8181c96bb81b7794c97fd": "nicht prüfbar",
+   "82af9f056c6b593e970bbcdad644a3c4": "nicht prüfbar",
+   "3d2bbc69dfb4107735b1aadade521d26": "nicht prüfbar",
+   "9ca71fb08fab4f64b4f271a91aefd730": "nicht prüfbar"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.tgw-group.com/en/career/"
+  "career_url": "https://www.tgw-group.com/en/career/jobs/"
  },
  "Keba": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "keba.com"
+  "career_url": "https://jobs.keba.com/Jobs"
  },
  "Teufelberger": {
-  "seen": [
-   "59222ddd29d4df8a7109484457013c14"
-  ],
+  "seen": {
+   "59222ddd29d4df8a7109484457013c14": "2026-10-05"
+  },
+  "portal": {
+   "59222ddd29d4df8a7109484457013c14": "auch auf karriere.at"
+  },
   "last": "2026-10-05",
   "career_url": "https://careers.teufelberger.com/"
  },
  "Pöttinger": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.poettinger.at/karriere"
+  "career_url": "https://www.poettinger.at/de_at/karriere"
  },
  "Eurofunk Kappacher": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.eurofunk.com/career/jobs/"
+  "career_url": "https://chancen.eurofunk.com/stellenangebote.html"
  },
  "Greiner": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "greiner.com"
+  "career_url": "https://jobs.greiner.com/"
  },
  "Sparkasse OÖ": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.sparkasse-ooe.at/karriere"
+  "career_url": "https://www.sparkasse-ooe.at/karriere/"
  },
  "Energie AG OÖ": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "energieag.at"
+  "career_url": "https://jobs.energieag.at/Jobs"
  },
  "Linz AG": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.linzag.at/portal/start.app?id=37&nav=/de_1/privatkunden/zuhause/abfall/service_dienstleistungen/altstoffsammelstellen_suche/altstoffsammelstellen_suche.nav.xhtml"
+  "career_url": "https://karriere.linzag.at/Jobs"
  },
  "Kremsmüller": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.kremsmueller.com/karriere-akademie/"
+  "career_url": "https://www.kremsmueller.com/karriere-akademie/offene-stellen/"
  },
  "ELK Fertighaus": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "elk.at"
  },
  "Hypo NOE": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://karriere.hyponoe.at/"
  },
  "EVN": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "evn.at"
  },
  "NÖ Versicherung": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "noevers.at"
  },
  "Berndorf AG": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.berndorf.at/karriere"
+  "career_url": "https://www.berndorf.at/karriere/offene-stellen"
  },
  "Lenzing": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "lenzing.com"
  },
  "Doka": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.doka.com/us/career/career"
  },
  "Umdasch Group": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.umdasch.com/karriere"
+  "career_url": "https://www.umdasch.com/karriere/offene-stellen"
  },
  "Test-Fuchs": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "test-fuchs.com"
  },
  "Schiebel": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://schiebel-actuators.com/karriere/"
  },
  "Frequentis Pro": {
-  "seen": [],
+  "seen": {
+   "485963c5153c8f71f6eb4a386e11399a": "2026-10-05",
+   "92d786e6c51fc4f1fda9c011ff74438d": "2026-10-05",
+   "b955c286a028f97daa9bdedd4397e1e9": "2026-10-05",
+   "2c190a8f63f0704db6e6820157b0e929": "2026-10-05",
+   "94daf7fd64c3f231efc17da7a05f84b4": "2026-10-05",
+   "34348a66a4a1ea41b61acb9a5ff869db": "2026-10-05",
+   "74715cfdf184ba14b9cce42093cbad71": "2026-10-05",
+   "37f3be5b37a98a2d1aa68442c2c4124e": "2026-10-05",
+   "5330b49b79f4e6d2aedf1a6dc2689181": "2026-10-05",
+   "25a2c55a0b97ae25e50264e70fae4112": "2026-10-05",
+   "92ec2deaaf8d81ff27008348d951d457": "2026-10-05",
+   "085e05a08345be6853b76a152127f3d7": "2026-10-05",
+   "1e527d8931511af5899196fee06c65f6": "2026-10-05",
+   "f66ae092ef72dd70c4c8d0fdc85669fc": "2026-10-05",
+   "57b24f7ad15680de101c8b843ca01e1e": "2026-10-05",
+   "1223f7ae7590d9d6d164f1aae2cf4d0e": "2026-10-05",
+   "509f007aa2b070e52025977f532b371c": "2026-10-05",
+   "46659b2ce3fb7c21f7ea41eb86aa2f63": "2026-10-05",
+   "9457183362f37b8cf02675281bf02219": "2026-10-05"
+  },
+  "portal": {
+   "485963c5153c8f71f6eb4a386e11399a": "auch auf karriere.at",
+   "92d786e6c51fc4f1fda9c011ff74438d": "nicht prüfbar",
+   "b955c286a028f97daa9bdedd4397e1e9": "auch auf karriere.at",
+   "2c190a8f63f0704db6e6820157b0e929": "nicht prüfbar",
+   "94daf7fd64c3f231efc17da7a05f84b4": "auch auf karriere.at",
+   "34348a66a4a1ea41b61acb9a5ff869db": "auch auf karriere.at",
+   "74715cfdf184ba14b9cce42093cbad71": "nicht prüfbar",
+   "37f3be5b37a98a2d1aa68442c2c4124e": "auch auf karriere.at",
+   "5330b49b79f4e6d2aedf1a6dc2689181": "nicht prüfbar",
+   "25a2c55a0b97ae25e50264e70fae4112": "auch auf karriere.at",
+   "92ec2deaaf8d81ff27008348d951d457": "auch auf karriere.at",
+   "085e05a08345be6853b76a152127f3d7": "nicht prüfbar",
+   "1e527d8931511af5899196fee06c65f6": "nicht prüfbar",
+   "f66ae092ef72dd70c4c8d0fdc85669fc": "auch auf karriere.at",
+   "57b24f7ad15680de101c8b843ca01e1e": "nicht prüfbar",
+   "1223f7ae7590d9d6d164f1aae2cf4d0e": "nicht prüfbar",
+   "509f007aa2b070e52025977f532b371c": "auch auf karriere.at",
+   "46659b2ce3fb7c21f7ea41eb86aa2f63": "nicht geprüft",
+   "9457183362f37b8cf02675281bf02219": "nicht geprüft"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.frequentis.com/en/careers"
+  "career_url": "https://jobs.frequentis.com/careers/SearchJobs"
  },
  "SBA Research": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.sba-research.org/jobs"
+  "career_url": "https://www.sba-research.org/jobs/"
  },
  "Runtastic": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "runtastic.com"
  },
  "Dynatrace": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.dynatrace.com/jobs"
+  "career_url": "https://www.dynatrace.com/careers/"
  },
  "Mavenir": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "mavenir.com"
  },
  "Cisco Systems Austria": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://careers.cisco.com/global/en/home"
  },
  "Atos Österreich": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://atos.net/en/join-us"
+  "career_url": "https://jobs.atos.net/"
  },
  "Raiffeisen Informatik": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.raiffeiseninformatik.at/karriere-2/"
+  "career_url": "https://www.raiffeiseninformatik.at/jobs/stellenangebote/"
  },
  "Allianz Technology": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "allianz-technology.com"
  },
  "Erste Digital": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.erstegroup.com/karriere"
+  "career_url": "https://www.erstegroup.com/de/karriere/stellenangebote/it-stellenangebote"
  },
  "s IT Solutions": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "sitsolutions.at"
  },
  "Hello bank/BAWAG IT": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.bawaggroup.com/karriere"
+  "career_url": "https://www.bawag.at/bawag/ueber-uns/karriere"
  },
  "Santander Consumer Bank AT": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.santanderconsumer.at/karriere"
  },
  "Generali Österreich": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.generali.at/karriere"
+  "career_url": "https://www.generali.at/karriere/"
  },
  "Merkur Versicherung": {
-  "seen": [],
+  "seen": {
+   "cb1e8cc918b2a63b8d254536fa5b7b4d": "2026-10-05"
+  },
+  "portal": {
+   "cb1e8cc918b2a63b8d254536fa5b7b4d": "nicht geprüft"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.merkur.at/karriere"
+  "career_url": "https://merkur.recruitee.com/"
  },
  "Vamed": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "vamed.com"
  },
  "Wiener Privatklinik": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://wiener-privatklinik.com/karriere/"
  },
  "Rudolfinerhaus": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "https://www.rudolfinerhaus.at/karriere/"
  },
  "Libro": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "libro.at"
  },
  "Bipa": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://team.bipa.at/"
+  "career_url": "https://www.bipa.at/cp/faq-bestellen"
  },
  "XXXLutz": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "xxxlutz.at"
+  "career_url": "https://karriere.xxxlutz.at/"
  },
  "Kika/Leiner": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "kika.at"
  },
  "Marchtrenk Wimberger": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "wimberger.at"
  },
  "Wien Holding": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.wienholding.at/karriere/beruf-karriere"
+  "career_url": "https://www.wienholding.at/karriere/aktuelle-stellenangebote"
  },
  "Wiener Stadthalle": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.stadthalle.com/de/information/karriere"
+  "career_url": "https://www.stadthalle.com/de/information/karriere/aktuelle-stellenangebote"
  },
  "Casinos Austria IT": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.casinos.at"
+  "career_url": "https://www.glueckimjob.cal-group.at/jobs?company=CUISINO&company=CASINOS_AUSTRIA"
  },
  "Novomatic": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
-  "career_url": "https://www.novomatic.com/explore-novomatic/karriere"
+  "career_url": "https://www.novomatic.com/explore-novomatic/karriere/novomatic-als-arbeitgeber"
  },
  "ADMIRAL Sportwetten": {
-  "seen": [],
+  "seen": {},
+  "portal": {},
   "last": "2026-10-05",
   "career_url": "admiral.at"
  },
  "Palfinger": {
-  "seen": [],
+  "seen": {
+   "cf5f17447e90bec9a0791206adebe3a5": "2026-10-05"
+  },
+  "portal": {
+   "cf5f17447e90bec9a0791206adebe3a5": "nicht geprüft"
+  },
   "last": "2026-10-05",
-  "career_url": "https://www.palfinger.com/us/en/career.html"
+  "career_url": "https://www.palfinger.com/worldwide/en/career/jobs.html"
  }
 }
