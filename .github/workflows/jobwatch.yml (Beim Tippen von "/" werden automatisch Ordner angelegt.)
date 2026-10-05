@@ -1,0 +1,62 @@
+name: jobwatch
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 04:00 UTC = 06:00 Wien (Sommerzeit), 05:00 im Winter
+  workflow_dispatch:       # Knopf "Run workflow" zum manuellen Start
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: jobwatch
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pakete installieren
+        run: pip install -r requirements.txt
+
+      - name: Crawler laufen lassen
+        run: python crawler.py
+
+      - name: Webseite bauen
+        run: |
+          mkdir -p site
+          cp "$(ls -t anrufliste_*.html | head -1)" site/index.html
+          cp "$(ls -t anrufliste_*.csv | head -1)" site/anrufliste.csv
+          cp "$(ls -t status_*.csv | head -1)" site/status.csv
+          printf "User-agent: *\nDisallow: /\n" > site/robots.txt
+
+      - name: Stand (state.json) speichern
+        run: |
+          git config user.name "jobwatch-bot"
+          git config user.email "jobwatch-bot@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet || git commit -m "jobwatch: Stand $(date +%F)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: crawl
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
