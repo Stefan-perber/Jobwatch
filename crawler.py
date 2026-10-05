@@ -447,10 +447,12 @@ def main():
     except Exception: state = {}
     today = datetime.date.today().isoformat()
     todayd = datetime.date.today()
-    rows, report = [], []
+    rows, report, all_companies = [], [], []
     budget = [60]  # max. karriere.at-Prüfungen pro Lauf
     for row in csv.DictReader(open("companies.csv", encoding="utf-8")):
         name, dom = row["name"].strip(), row["domain"].strip()
+        row["region"] = region_of(row.get("ort", ""))
+        all_companies.append(row)
         if only and name.lower() not in only: continue
         if not dom: report.append((name, "KEINE_DOMAIN", "", "", 0)); continue
         res = crawl(dom, row.get("career_url", "").strip())
@@ -473,7 +475,7 @@ def main():
             if pstat in ("nicht geprüft",): pass
             portal_new[h] = pstat
             contact = extract_contact(j["url"]) if (j["url"] != res["url"] and h not in old) else ""
-            rows.append({"firma": name, "titel": j["title"], "ort": j["location"], "url": j["url"],
+            rows.append({"firma": name, "hash": h, "titel": j["title"], "ort": j["location"], "url": j["url"],
                          "kontakt": contact, "neu": neu, "tage": tage, "typ": job_type(j["title"]),
                          "portal": pstat, "region": region_of(row.get("ort", "")), "karriere": res["url"],
                          "hook": hook(name, j["title"], tage)})
@@ -492,6 +494,11 @@ def main():
     print(f"\n{len(rows)} Cloud/Data/Infra-Stellen -> anrufliste_{today}.html / .csv")
     bad = [r for r in report if r[1] != "OK"]
     print(f"{len(bad)} Firmen brauchen Nacharbeit (siehe status_{today}.csv)")
+    try:
+        import sync_supabase
+        sync_supabase.sync(all_companies, rows, report, today)
+    except Exception as e:  # Sync darf den Lauf nie zum Absturz bringen
+        print(f"::warning::Supabase-Sync nicht ausgeführt: {e}")
 
 
 if __name__ == "__main__":
